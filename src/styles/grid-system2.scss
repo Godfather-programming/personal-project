@@ -1,0 +1,65 @@
+@use "./breakpoints" as *;
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.container {
+  width: 100%;
+  max-width: 132rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-inline: 1.5rem;
+}
+
+/* ==========================================
+                  ROW
+========================================== */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ==========================================
+              BASE COLUMN
+========================================== */
+
+.row > * {
+  box-sizing: border-box;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: 0;
+
+  padding-inline: 1rem;
+}
+
+/* ==========================================
+             AUTO COLUMN
+========================================== */
+
+.col {
+  flex: 1 1 0;
+}
+
+/* ==========================================
+             WIDTH COLUMNS
+========================================== */
+
+@for $i from 1 through 12 {
+
+  .col_#{$i} {
+
+    $width: calc($i / 12);
+
+    flex: 0 1 percentage($width);
+    max-width: percentage($width);
+
+  }
+
+}

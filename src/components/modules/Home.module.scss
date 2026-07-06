@@ -1,0 +1,232 @@
+@use "../../styles" as *;
+@import "../../styles/grid-system.scss";
+
+.homeSection {
+  background-image: url("../../../public/images/shapes/header-shape.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 82rem;
+}
+
+.container {
+  // background-color: chocolate;
+}
+
+.home {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.introductionText {
+  // width: 50%;
+}
+.textPart {
+  align-items: left;
+}
+.texts {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 2.8rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  font-family: "Poppins SemiBold";
+}
+.texts__green {
+  color: $primary-color;
+  font-weight: 100;
+}
+
+.texts__orange {
+  color: #f57f17;
+}
+
+.textPart h3 {
+  color: $primary-color;
+  font-size: 5rem;
+  text-wrap: nowrap;
+}
+
+.textPart p {
+  color: $text-color;
+  opacity: 71%;
+  margin-top: 1.5rem;
+}
+
+.buttonsPart {
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.introductionImage {
+  // width: 100%;
+  width: 55rem;
+  height: 55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1rem $primary-color;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  background-image: url(../../../public/images/header-avatar.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  box-shadow: 0 0 4rem #60e9ff27;
+  border: 2rem solid $section-bg-color;
+  // text-align: center;
+}
+
+.svgHeader {
+  width: 100%;
+  // overflow: ;
+}
+
+@include large {
+  .homeSection {
+    height: 74rem;
+  }
+
+  .introductionImage {
+    width: 45rem;
+    height: 45rem;
+  }
+}
+
+@include desktop {
+  .homeSection {
+    height: 66rem;
+  }
+
+  .introductionImage {
+    width: 38rem;
+    height: 38rem;
+  }
+}
+
+@include laptop {
+  .homeSection {
+    background-image: none;
+    height: auto;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    justify-content: center;
+    // text-align: center;
+    margin-top: 4rem;
+  }
+  .introductionText {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .textPart {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  .texts {
+    font-size: 2.5rem;
+    text-wrap: nowrap;
+  }
+  .textPart h3 {
+    font-size: 4rem;
+    margin-top: 0;
+  }
+
+  .textPart p {
+    margin-top: 1.5rem;
+  }
+
+  .buttonsPart {
+    flex-wrap: nowrap;
+    margin-top: 3rem;
+  }
+
+  .introductionImage {
+    margin: 0 auto;
+    width: 36rem;
+    height: 36rem;
+  }
+}
+
+@include tablet {
+  .home {
+    // flex-direction: column-reverse;
+    gap: 0;
+    // justify-content: center;
+  }
+
+  .introductionText {
+    // text-align: center;
+  }
+
+  .textPart {
+    text-align: center;
+  }
+
+  .texts {
+    // align-items: center;
+    justify-content: center;
+  }
+
+  .buttonsPart {
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .introductionImage {
+    width: 34rem;
+    height: 34rem;
+    border-width: 1.5rem;
+  }
+}
+
+@include mobile {
+  .texts {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .textPart h3 {
+    font-size: 3rem;
+  }
+
+  .textPart p {
+    font-size: 2rem;
+  }
+
+  .buttonsPart {
+    flex-wrap: wrap;
+  }
+
+  .introductionImage {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@include px410 {
+  .container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .introductionImage {
+    width: 28rem;
+    height: 28rem;
+    border-width: 1rem;
+  }
+}
+
+@include px350 {
+}

@@ -1,0 +1,66 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+$large: 1400px;
+
+@mixin large {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// @mixin px490 {
+//   @media (max-width: 490px) {
+//     @content;
+//   }
+// }
+
+@mixin px410 {
+  @media (max-width: 410px) {
+    @content;
+  }
+}
+
+@mixin px391 {
+  @media (max-width: 391px) {
+    @content;
+  }
+}
+
+@mixin px350 {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

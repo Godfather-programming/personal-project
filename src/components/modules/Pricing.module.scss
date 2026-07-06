@@ -1,0 +1,94 @@
+@use "../../styles" as *;
+@import "../../styles/grid-system.scss";
+@import "../../styles/breakpointsExact.scss";
+
+.pricingSection {
+  margin-top: 12rem;
+  //   background-color: #fff;
+  transform: skewY(-5deg);
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  box-shadow: 0 0 8rem #13b6ff24;
+  padding: 2rem 0 20rem 0;
+}
+
+.pricingSection .container {
+  transform: skewY(5deg);
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardsWrapper {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 8rem #60eaff27;
+}
+
+.pricingCard {
+    // flex-shrink: 1;
+  // width: 37rem;
+  height: 60rem;
+  box-shadow: 0 0 8rem #60e9ff27;
+}
+
+.specification {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.specification__title {
+  font-size: 3.6rem;
+}
+.specification__price {
+  font-size: 2.4rem;
+}
+
+.priceList {
+  width: fit-content;
+  margin: 4rem auto 0;
+}
+
+.priceList__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+
+// .priceList__item:first-child {
+//   margin-top: -0.5rem;
+// }
+
+.priceList__item span {
+  margin-right: 0.5rem;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  margin: 3rem auto 0;
+  width: 20rem;
+  height: 6rem;
+  line-height: 6rem;
+  background-color: #f57f17;
+  color: #fff;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}

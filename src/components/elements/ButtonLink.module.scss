@@ -1,0 +1,22 @@
+@use "../../styles" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  padding: 2rem;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  font-family: "Poppins SemiBold";
+  color: #fff;
+}
+
+@include mobile {
+  .button {
+    width: 100%;
+  }
+}

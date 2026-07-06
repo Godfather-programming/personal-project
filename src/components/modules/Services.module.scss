@@ -1,0 +1,13 @@
+@use "../../styles" as *;
+@import "../../styles/grid-system.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   column-gap: 0rem;
+}
+
+@include laptop {
+
+}

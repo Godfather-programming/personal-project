@@ -1,0 +1,202 @@
+@use "../styles" as *;
+@import "../styles/grid-system.scss";
+
+.header {
+  background-color: $section-bg-color;
+  box-shadow: 0rem 0.5rem 4rem #04c3ff16;
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  // position: relative;
+}
+
+.nav__logo {
+  font-size: 6rem;
+  color: $primary-color;
+  font-family: "Poppins Black";
+  font-weight: bolder;
+}
+
+.list {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+  z-index: 3;
+}
+
+.list__link {
+  color: $text-color;
+  font-family: "Poppins Medium";
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+}
+
+.list__link:hover {
+  color: $primary-color;
+}
+
+.list__link_active {
+  color: $primary-color;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+// also you can put content: ""; here because it has no effect on the element which has .icon__line class
+.icon__line,
+.icon__line::after,
+.icon__line::before {
+  width: 4.5rem;
+  height: 0.5rem;
+  background-color: $primary-color;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.icon__line {
+  position: relative;
+}
+
+.icon__line::after,
+.icon__line::before {
+  content: "";
+  position: absolute;
+}
+
+.icon__line::before {
+  top: 1.2rem;
+}
+
+.icon__line::after {
+  top: -1.2rem; // equal with bottom: 1rem;
+}
+
+@include laptop {
+  .list {
+    gap: 1.5rem;
+  }
+
+  .nav__logo {
+    font-size: 5rem;
+  }
+}
+
+@include tablet {
+  .list {
+    background-color: $section-bg-color;
+    position: absolute;
+    top: 85%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: auto;
+    right: 0;
+    left: 0;
+    // right: 0 and left:0 place your element in the middle from right and left.
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    height: 0;
+    // do not give padding to this menu because in this way, height: 0; doesn't work on this
+    overflow: hidden;
+  }
+
+  .list_open {
+    height: 36rem;
+  } // do not  define this class out of the tablet media query(because you need this class just in tablet media query). if you do that, when you enlarge you size of your viewport(صفحه نمایش) more than tablet media query = 768px, if this class exist, it doesn't be removed.
+
+  .list__item {
+    padding: 0.5rem 0;
+  }
+
+  .list__item:first-child {
+    padding-top: 2rem;
+  }
+
+  .list__item:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .list__link {
+    color: $text-color;
+    font-family: "Poppins Medium";
+    font-weight: 600;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon_open .icon__line {
+    background-color: transparent;
+  }
+
+  .icon_open .icon__line::before {
+    // the amount of translateY have to be equal with top or bottom property that you give to .icon__line::before or .icon__line::after class
+    transform: translateY(-1.2rem) rotate(45deg);
+    -webkit-transform: translateY(-1.2rem) rotate(45deg);
+    -moz-transform: translateY(-1.2rem) rotate(45deg);
+    -ms-transform: translateY(-1.2rem) rotate(45deg);
+    -o-transform: translateY(-1.2rem) rotate(45deg);
+  }
+
+  .icon_open .icon__line::after {
+    transform: translateY(1.2rem) rotate(-45deg);
+    -webkit-transform: translateY(1.2rem) rotate(-45deg);
+    -moz-transform: translateY(1.2rem) rotate(-45deg);
+    -ms-transform: translateY(1.2rem) rotate(-45deg);
+    -o-transform: translateY(1.2rem) rotate(-45deg);
+  }
+
+  .cover {
+    position: fixed; // if an element has position: fixed, that element is more preferable(دارای ارجحیت بیشتری)  than the other element, for example, in this program, header element.
+    top: 0;
+    right: 0;
+    background-color: #00000010;
+    width: 100%;
+    height: 100%;
+    z-index: 2; // if the cover element have more z-index than header, you can't click on hamburger list that exist in header.
+    // opacity: 0;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  }
+}
