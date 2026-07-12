@@ -1,0 +1,99 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/* ---------------- Light Theme ---------------- */
+:root {
+  --primary-color: #0ABEAD;
+  --text-color: #333333;
+  --app-bg-color: #ffffff;
+  --section-bg-color: #f8f8f8;
+}
+
+/* ---------------- Dark Theme ---------------- */
+html.dark {
+  --primary-color: #0ABEAD;
+  --text-color: #95A5C6;
+  --app-bg-color: #161D26;
+  --section-bg-color: #1F2935;
+}
+
+/* ---------------- Sass Variables ---------------- */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.footer {
+  max-width: 137rem;
+  margin: 0 auto 0 auto;
+  background-color: var(--app-bg-color);
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy__text {
+  letter-spacing: 0.6rem;
+}
+
+.copyIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.copyIcons__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  fill: var(--app-bg-color);
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+
+.copyIcons__icon:hover {
+  background-color: var(--primary-color);
+}
+
+.copyIcons__icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 768px) {
+  .copy {
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */
