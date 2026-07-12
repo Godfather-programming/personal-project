@@ -11,6 +11,10 @@
   top: 0;
 }
 
+:global(html.dark) .header {
+  box-shadow: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -76,11 +80,11 @@
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 
 .icon__line {
@@ -113,6 +117,11 @@
 
 @include tablet {
   .list {
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
     background-color: $section-bg-color;
     position: absolute;
     top: 85%;
@@ -125,11 +134,6 @@
     // right: 0 and left:0 place your element in the middle from right and left.
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     height: 0;
     // do not give padding to this menu because in this way, height: 0; doesn't work on this
     overflow: hidden;

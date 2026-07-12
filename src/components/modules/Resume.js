@@ -49,7 +49,7 @@ function Resume() {
   // );
   // console.log(showSpecification);
   return (
-    <section className={styles.resumeSection}>
+    <section className={styles.resumeSection} id="Resume">
       <div className={styles.container}>
         <SectionIntroduction title="Resume" text="My Formal Bio Details" />
         <div className={styles.wrapper}>
@@ -58,7 +58,7 @@ function Resume() {
           >
             <ul className={styles.list}>
               {resumeState.map((item) => (
-                <li key={item.key} className={styles.list__item}>
+                <li key={item.key} className={styles.list__item} style={{"boxShadow": item.selected === true ? "0 0 4rem #60e9ff27" : null}}>
                   <Link
                     href="#"
                     className={

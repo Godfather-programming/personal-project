@@ -134,22 +134,33 @@ table {
   border-spacing: 0;
 }
 
-
-
 // global style //
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  //   max-width: 140rem;
+  //max-width: 140rem;
   font-size: 62.5%;
   margin: 0 auto;
+  // transition: all 2s ease-in;
+  // -webkit-transition: all 2s ease-in;
+  // -moz-transition: all 2s ease-in;
+  // -ms-transition: all 2s ease-in;
+  // -o-transition: all 2s ease-in;
 }
 
 *,
 *::after,
 *::before {
   box-sizing: inherit;
+}
+
+* {
+  transition:
+    background-color 1s ease-in,
+    color 1s ease-in,
+    border-color 1s ease-in,
+    fill 1s ease-in;
 }
 
 body {
@@ -175,4 +186,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+@include tablet {
+  * {
+    cursor: default !important;
+  }
 }

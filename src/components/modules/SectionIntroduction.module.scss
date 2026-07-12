@@ -19,6 +19,7 @@
 }
 .wrapper__text {
   letter-spacing: 0.6rem;
+  color: $text-color;
 }
 
 .wrapperBorder {
@@ -53,4 +54,10 @@
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+}
+
+@include px410 {
+  .wrapper__text {
+    letter-spacing: 0.1rem;
+  }
 }

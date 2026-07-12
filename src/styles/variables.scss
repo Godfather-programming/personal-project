@@ -5,12 +5,28 @@
 * Browsers: last 4 version
 */
 
-// Variables //
+/* ---------------- Light Theme ---------------- */
 
+:root {
+  --primary-color: #0ABEAD;
+  --text-color: #333333;
+  --app-bg-color: #ffffff;
+  --section-bg-color: #f8f8f8;
+}
 
-$text-color: #333333;
-$primary-color: #0ABEAD;
-$app-bg-color: #fff;
-$section-bg-color: #fff;
-$bodyBg: #FAF4F2;
+/* ---------------- Dark Theme ---------------- */
+
+html.dark {
+  --primary-color: #0ABEAD;
+  --text-color: #95A5C6;
+  --app-bg-color: #161D26;
+  --section-bg-color: #1F2935;
+}
+
+/* ---------------- Sass Variables ---------------- */
+
+$primary-color: var(--primary-color);
+$text-color: var(--text-color);
+$app-bg-color: var(--app-bg-color);
+$section-bg-color: var(--section-bg-color);
 

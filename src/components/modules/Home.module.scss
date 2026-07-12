@@ -8,6 +8,10 @@
   height: 82rem;
 }
 
+:global(html.dark) .homeSection {
+  background-image: url("../../../public/images/shapes/header-shape-dark.svg");
+}
+
 .container {
   // background-color: chocolate;
 }
@@ -67,7 +71,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 1rem $primary-color;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -ms-border-radius: 100%;
@@ -81,10 +84,14 @@
   // text-align: center;
 }
 
-.svgHeader {
-  width: 100%;
-  // overflow: ;
+:global(html.dark) .introductionImage {
+  box-shadow: none; 
 }
+
+// .svgHeader {
+//   width: 100%;
+//   // overflow: ;
+// }
 
 @include large {
   .homeSection {
@@ -160,6 +167,7 @@
 
 @include tablet {
   .home {
+    margin-top: 0;
     // flex-direction: column-reverse;
     gap: 0;
     // justify-content: center;

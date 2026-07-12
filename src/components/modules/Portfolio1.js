@@ -76,7 +76,7 @@ function Portfolio1() {
   key={list.find(item => item.selected)?.option}
   className={styles.swiper}
   modules={[Pagination]}
-  spaceBetween={40}
+  spaceBetween={30}
   pagination={{ clickable: true }}
   breakpoints={{
     0: {

@@ -3,23 +3,27 @@
 
 .resumeSection {
   margin-top: 12rem;
-  //   position: relative;
+  //position: relative;
   background-color: $section-bg-color;
-  transform: skewY(-5deg);
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
+  transform: translateZ(0) skewY(-5deg);
+  -webkit-transform: translateZ(0) skewY(-5deg);
+  -moz-transform: translateZ(0) skewY(-5deg);
+  -ms-transform: translateZ(0) skewY(-5deg);
+  -o-transform: translateZ(0) skewY(-5deg);
   box-shadow: 0 0 8rem #13b6ff24;
   padding-bottom: 3rem;
 }
 
+:global(html.dark) .resumeSection {
+  box-shadow: none;
+}
+
 .resumeSection .container {
-  transform: skewY(5deg);
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
+  transform: translateZ(0) skewY(5deg);
+  -webkit-transform: translateZ(0) skewY(5deg);
+  -moz-transform: translateZ(0) skewY(5deg);
+  -ms-transform: translateZ(0) skewY(5deg);
+  -o-transform: translateZ(0) skewY(5deg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +44,10 @@
   margin-bottom: 10rem;
   box-shadow: 0 0 8rem #60e9ff27;
   // min-width: 0;
+}
+
+:global(html.dark) .wrapperCharacteristics {
+  box-shadow: none;
 }
 
 .list {
@@ -64,24 +72,25 @@
   align-items: center;
   gap: 2rem;
   color: $text-color;
-  padding: 0.8rem 1.2rem 0.8rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
   -ms-border-radius: 3rem;
   -o-border-radius: 3rem;
   text-wrap: nowrap;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 
 .list__link_selected {
   background-color: $primary-color;
   color: #fff;
   width: 100%;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
+  box-shadow: 0 0 4rem #60e9ff27;
 }
 
 .list__item span:first-child {
@@ -161,7 +170,7 @@
   .list {
     flex-direction: row;
     align-items: stretch;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -207,5 +216,11 @@
 @include px391 {
   .wrapperSpecifications {
     gap: 6rem;
+  }
+
+  .list {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }

@@ -29,6 +29,11 @@ Grid System
   margin-bottom: 30px;
 }
 
+html.dark .row > *{
+  padding-right: 0;
+  padding-right: 0;
+}
+
 .col {
   max-width: 100%;
   flex-grow: 1;
@@ -143,7 +148,7 @@ Grid System
 
   .col_sm_6 {
     width: 50%;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
     // height: 5rem
   }
 

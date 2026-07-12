@@ -5,12 +5,10 @@ import contactUsIcons from "@/src/constants/ContactUsIcons";
 
 function ContactUs() {
   return (
-    <>
-      <div className={styles.sectionIntroduction}>
-        <SectionIntroduction title="Contact Us" text="Let's Keep In Touch" />
-      </div>
-      <section className={styles.contactUsSection}>
-        <div className={styles.container}>
+    <section className={styles.sectionIntroduction} id="Contact">
+      <SectionIntroduction title="Contact Us" text="Let's Keep In Touch" />
+      <div className={styles.contactUsSection}>
+        <div className={`${styles.container} ${styles.parent}`}>
           {/* <div className={styles.map}>
 
 
@@ -59,25 +57,8 @@ function ContactUs() {
             </svg>{" "}
           </div>
         </div>
-      </section>
-      <div className={styles.container}>
-        <div className={styles.copy}>
-          <span className={styles.copy__text}>
-            {" "}
-            © 2019 createuiux. All rights reserved.{" "}
-          </span>
-
-          <div className={styles.copyIcons}>
-            {contactUsIcons.map((icon) => (
-              <span key={icon.key} className={styles.copyIcons__icon} style={{backgroundColor: icon.selected ? "#0ABEAD": null}}>
-                {" "}
-                {icon.svg}{" "}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
-    </>
+    </section>
   );
 }
 

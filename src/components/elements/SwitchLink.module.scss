@@ -1,0 +1,30 @@
+@use "../../styles" as *;
+
+.switchTheme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: $text-color;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  fill: $app-bg-color;
+  transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  cursor: pointer;
+}
+
+
+
+
+.switchTheme svg {
+  width: 4rem;
+  height: 4rem;
+}

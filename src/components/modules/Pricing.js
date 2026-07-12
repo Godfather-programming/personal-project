@@ -5,14 +5,14 @@ import Link from "next/link";
 
 function Pricing() {
   return (
-    <section className={styles.pricingSection}>
+    <section className={styles.pricingSection} id="Pricing">
       <div className={styles.container}>
         <SectionIntroduction
           title="Pricing"
           text="Check Our Services Package"
         />
 
-        <div className={`${styles.cardsWrapper} ${styles.row}`}>
+        <div className={`${styles.cardsWrapper}`}>
           {pricingSpecifications.map((item) => (
             <div
               className={`${styles.pricingCard} ${styles.col_4}`}

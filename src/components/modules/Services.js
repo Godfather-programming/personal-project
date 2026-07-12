@@ -5,7 +5,7 @@ import servicesIcons from "@/src/constants/ServicesIcons";
 
 function Services() {
   return (
-    <section>
+    <section className={styles.services} id="Services">
       <div className={styles.container}>
         <SectionIntroduction title="Services" text="What We Provide You?" />
         <div className={`${styles.row} ${styles.wrapper}`}>

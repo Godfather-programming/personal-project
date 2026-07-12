@@ -6,7 +6,7 @@ import SectionIntroduction from "@/src/components/modules/SectionIntroduction";
 
 function AboutUs() {
   return (
-    <section>
+    <section id="About Us" className={styles.aboutUs}>
       <div className={styles.container}>
 
       <SectionIntroduction title="About Us" text="Why Choose Me?" color="#0ABEAD"/>

@@ -1,0 +1,67 @@
+@use "../styles" as *;
+
+.footer {
+  max-width: 137rem;
+  margin: 0 auto 0 auto;
+  background-color: $app-bg-color;
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy__text {
+  letter-spacing: 0.6rem;
+}
+
+.copyIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.copyIcons__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: $text-color;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  fill: $app-bg-color;
+  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+}
+
+.copyIcons__icon:hover {
+  background-color: $primary-color;
+  
+}
+
+.copyIcons__icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+// @include large {
+//   .copy {
+//     max-width: 137rem;
+//   }
+// }
+
+@include tablet {
+  .copy {
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+}

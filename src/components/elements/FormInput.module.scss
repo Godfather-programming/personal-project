@@ -1,5 +1,7 @@
+@use "../../styles" as *;
+
 .input {
-  max-width: 48rem;
+  // max-width: 48rem;
   height: 5rem;
   padding-left: 3rem;
   border-radius: 2rem;
@@ -10,8 +12,11 @@
   border: none;
   outline: none;
   box-shadow: 0 0 8rem #60e9ff27;
+  color: $text-color;
+  background-color: $app-bg-color;
+  
 }
 
 .input::-webkit-input-placeholder {
-  color: #333;
+  color: $text-color;
 }

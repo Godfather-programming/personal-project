@@ -8,6 +8,8 @@
   //   column-gap: 0rem;
 }
 
-@include laptop {
-
+@include tablet {
+   .services {
+    margin-top: -3rem;
+   }
 }

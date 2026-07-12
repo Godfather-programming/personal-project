@@ -1,7 +1,7 @@
 "use client";
 
 import React, { use, useEffect, useState } from "react";
-import styles from "@/src/components/modules/Portfolio1.module.scss";
+import styles from "@/src/components/modules/Portfolio.module.scss";
 import SectionIntroduction from "./SectionIntroduction";
 import { portfolioList, portfolioImages } from "@/src/constants/PortfolioPart";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,7 +57,7 @@ const selectHandler = (desiredItem) => {
   }, [images]);
 
   return (
-    <section>
+    <section id="Portfolio">
       <div className={styles.container}>
         <SectionIntroduction
           title="Portfolio"
@@ -86,7 +86,7 @@ const selectHandler = (desiredItem) => {
   key={list.find(item => item.selected)?.option}
   className={styles.swiper}
   modules={[Pagination]}
-  spaceBetween={40}
+  spaceBetween={10}
   pagination={{ clickable: true }}
   breakpoints={{
     0: {

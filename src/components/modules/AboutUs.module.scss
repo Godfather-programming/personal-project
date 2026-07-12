@@ -9,6 +9,10 @@
   min-height: 65rem;
 }
 
+:global(html.dark) .aboutUsInfo {
+  box-shadow: none;
+}
+
 .aboutUsInfo__picture {
   // background-image: url(../../../public/images/about-us-man.jpg);
   // min-height: 65rem;
@@ -153,6 +157,9 @@
 }
 
 @include laptop {
+  .aboutUs {
+    margin-top: -4rem;
+  }
   .aboutUsInfo {
     flex-direction: column;
   }
@@ -183,6 +190,7 @@
 @include mobile {
   .aboutUsInfoCaption__text {
     max-width: auto;
+    padding-right: 2rem;
   }
 
   .aboutUsInfo__buttons {
@@ -192,5 +200,11 @@
     gap: 1rem;
     margin-top: 3rem;
     
+  }
+}
+
+@include px410 {
+  .aboutUsInfoList__item {
+   margin-left: 0;
   }
 }

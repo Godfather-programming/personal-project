@@ -4,22 +4,26 @@
 
 .pricingSection {
   margin-top: 12rem;
-  //   background-color: #fff;
-  transform: skewY(-5deg);
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
+  background-color: $section-bg-color;
+  transform: translateZ(0) skewY(-5deg);
+  -webkit-transform: translateZ(0) skewY(-5deg);
+  -moz-transform: translateZ(0) skewY(-5deg);
+  -ms-transform: translateZ(0) skewY(-5deg);
+  -o-transform: translateZ(0) skewY(-5deg);
   box-shadow: 0 0 8rem #13b6ff24;
   padding: 2rem 0 20rem 0;
 }
 
+:global(html.dark) .pricingSection {
+  box-shadow: none;
+}
+
 .pricingSection .container {
-  transform: skewY(5deg);
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
+  transform: translateZ(0) skewY(5deg);
+  -webkit-transform: translateZ(0) skewY(5deg);
+  -moz-transform: translateZ(0) skewY(5deg);
+  -ms-transform: translateZ(0) skewY(5deg);
+  -o-transform: translateZ(0) skewY(5deg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,16 +33,23 @@
 .cardsWrapper {
   width: 100%;
   display: flex;
-  gap: 2rem;
-  background-color: #fff;
+  gap: 3rem;
+  background-color: $section-bg-color;
   box-shadow: 0 0 8rem #60eaff27;
 }
 
 .pricingCard {
-    // flex-shrink: 1;
+  // flex-grow: 1;
   // width: 37rem;
   height: 60rem;
   box-shadow: 0 0 8rem #60e9ff27;
+  background-color: $app-bg-color;
+}
+
+:global(html.dark) .pricingCard, .cardsWrapper {
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .specification {
@@ -48,6 +59,7 @@
   gap: 0.5rem;
   text-align: center;
   color: #fff;
+  width: 100%;
 }
 
 .specification__title {
@@ -58,8 +70,8 @@
 }
 
 .priceList {
-  width: fit-content;
   margin: 4rem auto 0;
+  width: fit-content;
 }
 
 .priceList__item {
@@ -91,4 +103,10 @@
   -moz-border-radius: 3rem;
   -ms-border-radius: 3rem;
   -o-border-radius: 3rem;
+}
+
+@include mobile {
+  .pricingCard {
+    width: 100%;
+  }
 }

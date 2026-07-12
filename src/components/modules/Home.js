@@ -6,8 +6,8 @@ import ButtonLink from "../elements/ButtonLink";
 
 function Home() {
   return (
-    <section className={styles.homeSection}>
-      <div className={`${styles.container}`} id="Home">
+    <section className={styles.homeSection} id="Home">
+      <div className={`${styles.container}`}>
         <div className={`${styles.row} ${styles.home}`}>
           <div
             className={`${styles.introductionText} ${styles.col_12} ${styles.col_lg_7}`}
@@ -47,9 +47,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-
-
     </section>
   );
 }
