@@ -59,6 +59,7 @@
 @include mobile {
   .wrapper__text {
     letter-spacing: 0.1rem;
+    // display: flex;
     text-align: center;
   }
 }

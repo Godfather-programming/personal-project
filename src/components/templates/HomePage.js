@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "@/src/components/modules/Home";
-import styles from "@/src/components/templates/HomePage.module.scss";
 import AboutUs from "@/src/components/modules/AboutUs";
 import Services from "@/src/components/modules/Services";
 import Resume from "@/src/components/modules/Resume";
