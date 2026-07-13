@@ -85,7 +85,7 @@
 }
 
 :global(html.dark) .introductionImage {
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 // .svgHeader {
@@ -119,6 +119,10 @@
   .homeSection {
     background-image: none;
     height: auto;
+  }
+
+  :global(html.dark) .homeSection {
+    background-image: none;
   }
 
   .home {
