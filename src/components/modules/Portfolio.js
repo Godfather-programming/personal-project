@@ -103,7 +103,7 @@ const selectHandler = (desiredItem) => {
   {images.map((item) => (
     <SwiperSlide key={item.key}>
       <div
-        style={{ backgroundImage: `url(${item.src})` }}
+        style={{ backgroundImage: `url("${item.src}")` }}
         className={`${styles.wrapper__image} ${visible ? styles.show : ""} `}
       />
     </SwiperSlide>
