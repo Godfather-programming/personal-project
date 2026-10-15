@@ -3,6 +3,9 @@ import styles from "@/src/components/modules/AboutUs.module.scss";
 import AboutUsList from "@/src/constants/AboutUsList";
 import ButtonLink from "@/src/components/elements/ButtonLink";
 import SectionIntroduction from "@/src/components/modules/SectionIntroduction";
+import { BASE_PATH } from "@/src/constants/siteUrl";
+
+// {`${BASE_PATH}/images/products/p${number}.png`}
 
 function AboutUs() {
   return (
@@ -13,7 +16,7 @@ function AboutUs() {
   
         <div className={styles.aboutUsInfo}>
           <div className={`${styles.aboutUsInfo__picture} `}>
-          <img src="https://godfather-programming.github.io/personal-project/images/about-us-man.jpg"/>
+          <img src={`${BASE_PATH}/images/about-us-man.jpg`}/>
             {" "}
           </div>
 
