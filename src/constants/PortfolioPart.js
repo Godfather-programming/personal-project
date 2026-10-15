@@ -1,3 +1,5 @@
+import { BASE_PATH } from "./siteUrl";
+
 const portfolioList = [
   { key: 1, option: "All Work", selected: true },
   { key: 2, option: "Illustration", selected: false },

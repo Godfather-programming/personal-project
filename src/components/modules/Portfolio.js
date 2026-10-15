@@ -13,6 +13,8 @@ import Link from "next/link";
 function Portfolio() {
   const [list, setList] = useState(portfolioList);
   const [images, setImages] = useState(portfolioImages);
+
+  images.map(item => console.log(item.src))
   // const [title, setTitle] = useState(false);
 
 const selectHandler = (desiredItem) => {
