@@ -34,6 +34,7 @@ function Header() {
   };
 
   useEffect(() => {
+    const sections = document.querySelectorAll("main > section");
     const observerSwitcher = (sections) => {
       sections.forEach((section) => {
         if (!section.isIntersecting) return;
@@ -64,7 +65,6 @@ function Header() {
       threshold: 0.3,
     });
 
-    const sections = document.querySelectorAll("main > section");
 
     sections.forEach((section) => {
       observer.observe(section);

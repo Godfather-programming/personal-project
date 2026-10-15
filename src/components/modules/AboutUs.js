@@ -13,7 +13,7 @@ function AboutUs() {
   
         <div className={styles.aboutUsInfo}>
           <div className={`${styles.aboutUsInfo__picture} `}>
-          <img src="/images/about-us-man.jpg"/>
+          <img src="https://godfather-programming.github.io/personal-project/images/about-us-man.jpg"/>
             {" "}
           </div>
 
